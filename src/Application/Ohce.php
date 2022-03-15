@@ -3,6 +3,7 @@ namespace Ohce\Application;
 class Ohce
 {
 
+
     public function echoe(string $miPalabra): string
     {
         if(strcmp('Stop!',$miPalabra)==0){

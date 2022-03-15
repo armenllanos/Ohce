@@ -9,12 +9,20 @@ use PHPUnit\Framework\TestCase;
 class OhceTest extends TestCase
 {
     /**
+     * @setUp
+     * */
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->ohce = new Ohce();
+    }
+    /**
      * @test
      */
     public function ohceOfOneLetterIsTheSame()
     {
-        $ohce = new Ohce();
-        $response = $ohce->echoe('a');
+
+        $response = $this->ohce->echoe('a');
         $this->assertEquals($response,'a');
     }
     /**
@@ -22,8 +30,7 @@ class OhceTest extends TestCase
      */
     public function ohceTwoLettersIsTheSame()
     {
-        $ohce = new Ohce();
-        $response = $ohce->echoe('oa');
+        $response = $this->ohce->echoe('oa');
         $this->assertEquals($response,'ao');
     }
     /**
@@ -31,8 +38,7 @@ class OhceTest extends TestCase
      */
     public function ohceOfPalindromeReturnsBonitaPalabra()
     {
-        $ohce = new Ohce();
-        $response = $ohce->echoe('oto');
+        $response = $this->ohce->echoe('oto');
         $this->assertEquals($response,'¡Bonita palabra!, oto');
     }
     /**
@@ -40,8 +46,7 @@ class OhceTest extends TestCase
      */
     public function ohceOfStopReturnsAdios()
     {
-        $ohce = new Ohce();
-        $response = $ohce->echoe('Stop!');
+        $response = $this->ohce->echoe('Stop!');
         $this->assertEquals($response,'Adios');
     }
 }
