@@ -38,10 +38,10 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceOfOhceReturnsMorningMessagge()
+    public function ohceOfStopReturnsAdios()
     {
         $ohce = new Ohce();
-        $response = $ohce->echoe('ohce Pedro');
-        $this->assertEquals($response,'¡Buenos dias Pedro!');
+        $response = $ohce->echoe('Stop!');
+        $this->assertEquals($response,'Adios');
     }
 }
