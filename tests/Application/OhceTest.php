@@ -3,6 +3,8 @@
 namespace Ohce\Tests\Application;
 
 
+use Mockery;
+use Ohce\Application\DateComparator;
 use Ohce\Application\Ohce;
 use PHPUnit\Framework\TestCase;
 
@@ -49,4 +51,18 @@ class OhceTest extends TestCase
         $response = $this->ohce->echoe('Stop!');
         $this->assertEquals($response,'Adios');
     }
+    /**
+     * @test
+     */
+    public function ohceInTheMorningReturnsBuenosDias()
+    {
+        $comparator = Mockery::mock(DateComparator::class);
+        $comparator->shouldReceive('morning')
+            ->andReturn(true);
+        $this->ohce->setComparator($comparator);
+        $response = $this->ohce->echoe('ohce Pedro');
+        $this->assertEquals($response,'Buenos días Pedro');
+    }
+
+
 }
