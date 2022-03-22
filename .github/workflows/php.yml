@@ -16,8 +16,7 @@ jobs:
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
-    - name: Test
-      run: php /tests/Application/OhceTest.php
+  
 
     - name: Cache Composer packages
       id: composer-cache
