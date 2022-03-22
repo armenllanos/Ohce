@@ -29,9 +29,9 @@ class Ohce
           if ($this->comparator->morning()){
               return 'Buenos días '. $nombre;
           }elseif ($this->comparator->evening()){
-              return 'Buenas tardes'. $nombre;
+              return 'Buenas tardes '. $nombre;
           }
-          return 'Buenas noches'. $nombre;
+          return 'Buenas noches '. $nombre;
         }
         return strrev($miPalabra);
     }
