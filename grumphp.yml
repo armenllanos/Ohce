@@ -1,2 +1,3 @@
 grumphp:
-    tasks: { shell: null }
+    tasks:
+        phpunit:
