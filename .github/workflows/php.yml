@@ -16,8 +16,8 @@ jobs:
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
-    - name: Grump
-      run: php /vendor/bin/grumphp run
+    - name: Test
+      run: php /tests/Application/OhceTest.php
 
     - name: Cache Composer packages
       id: composer-cache
