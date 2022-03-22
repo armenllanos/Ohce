@@ -30,13 +30,6 @@
             "phpro/grumphp-shim": true
         }
     },
-    "extra": {
-        "grumphp": {
-            "config-default-path": "path/to/grumphp.yml",
-            "project-path": "path/to/your/project/folder",
-            "disable-plugin": false
-        }
-    },
     "scripts": {
         "test": [
           "phpunit --configuration phpunit.xml"
