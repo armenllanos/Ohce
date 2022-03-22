@@ -9,7 +9,6 @@
     "require-dev": {
         "phpunit/phpunit": "^9.3.10",
         "mockery/mockery": "dev-master",
-        "phpro/grumphp-shim": "^1.9",
         "phpro/grumphp": "^1.9"
     },
     "minimum-stability": "stable",
@@ -27,7 +26,8 @@
     "config": {
         "optimize-autoloader": true,
         "allow-plugins": {
-            "phpro/grumphp-shim": true
+            "phpro/grumphp-shim": true,
+            "phpro/grumphp": true
         }
     },
     "scripts": {
